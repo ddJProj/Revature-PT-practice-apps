@@ -1,22 +1,23 @@
 
 
-// https://developer.mozilla.org/en-US/docs/Web/API/Window
-// https://developer.mozilla.org/en-US/docs/Web/API/Window/load_event
-// https://developer.mozilla.org/en-US/docs/Web/API/Document/DOMContentLoaded_event
-/* EXAMPLE:
-    document.addEventListener("DOMContentLoaded", (event) => {
-        console.log("DOM fully loaded and parsed");
-    });
 
-window.addEventListener("load", (event) => {
-  log.textContent += "load\n";
-});
+/*
 
-We dont need the listener for this example as we are using the index.html to start the script, but could be useful later.
+--- TODO: START HERE FOR SOLUTION ---
 
-*/
+-- What is the goal?
+    We want to create a web page that is loaded when the containers in our index.html is loaded
+    The web page needs to retrieve data from the backend controller api endpoint, and then display the data on the page
 
-/* Just use fetch as the base of our data retrieval from the endpoint.
+-- How?
+    - We will do this with plain javascript:
+        By embedding a script link into the html file, and defining a container that we want the script to fill.
+    - The backend api needs to be called
+        we will do this with a request made to the api endpoint, using fetch
+    - The desired data needs to be extracted from the returned response
+        we need to parse the response object and extract the data as text from the response body
+
+Just use fetch as the base of our data retrieval from the endpoint.
 https://developer.mozilla.org/en-US/docs/Web/API/Window/fetch
 */
 
@@ -53,6 +54,24 @@ fetch('/hello')
 
 
 
+
+
+
+// https://developer.mozilla.org/en-US/docs/Web/API/Window
+// https://developer.mozilla.org/en-US/docs/Web/API/Window/load_event
+// https://developer.mozilla.org/en-US/docs/Web/API/Document/DOMContentLoaded_event
+/* EXAMPLE:
+    document.addEventListener("DOMContentLoaded", (event) => {
+        console.log("DOM fully loaded and parsed");
+    });
+
+window.addEventListener("load", (event) => {
+  log.textContent += "load\n";
+});
+
+We dont need the listener for this example as we are using the index.html to start the script, but could be useful later.
+
+*/
 
 
 
