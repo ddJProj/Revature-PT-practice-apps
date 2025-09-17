@@ -32,6 +32,7 @@ fetch('/hello')
 
 
     // we still need to put the response message into something for it to be displayed in our html.
+    // the second .then is being called on the returned text value from response (the response body text/message (promise<>))
     .then((message) =>{
 
         // https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/div
